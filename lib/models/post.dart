@@ -1,4 +1,6 @@
-class Post {
+import 'package:scroll_test/models/combine_model.dart';
+
+class Post extends CombineModel {
   final int? id;
   final String? title;
   final String? body;
@@ -15,6 +17,7 @@ class Post {
     this.reactions,
     this.views,
     this.userId,
+    super.type = ItemType.post,
   });
 
   factory Post.fromJson(Map<String, dynamic> json) => Post(

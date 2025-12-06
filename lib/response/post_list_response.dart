@@ -8,6 +8,8 @@ class PostListResponse {
 
   PostListResponse({this.posts, this.total, this.skip, this.limit});
 
+ 
+
   factory PostListResponse.fromJson(Map<String, dynamic> json) =>
       PostListResponse(
         posts: json["posts"] == null
