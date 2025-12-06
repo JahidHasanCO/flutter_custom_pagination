@@ -8,7 +8,7 @@ class PostListResponse {
 
   PostListResponse({this.posts, this.total, this.skip, this.limit});
 
- 
+  bool get hasMore => (skip ?? 0) + (posts?.length ?? 0) < (total ?? 0);
 
   factory PostListResponse.fromJson(Map<String, dynamic> json) =>
       PostListResponse(
